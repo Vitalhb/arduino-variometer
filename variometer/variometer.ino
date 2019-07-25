@@ -1,7 +1,7 @@
 /* variometer -- The GNUVario embedded code
  *
  * Copyright 2016-2019 Baptiste PELLEGRIN
- * 
+ *
  * This file is part of GNUVario.
  *
  * GNUVario is free software: you can redistribute it and/or modify
@@ -43,16 +43,16 @@
 #include <FirmwareUpdaterTWS.h>
 #include <FlightHistory.h>
 
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
-/*!!            !!! WARNING  !!!              !!*/
-/*!! Before building check :                  !!*/
-/*!! libraries/VarioSettings/VarioSettings.h  !!*/
-/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+ /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+ /*!!            !!! WARNING  !!!              !!*/
+ /*!! Before building check :                  !!*/
+ /*!! libraries/VarioSettings/VarioSettings.h  !!*/
+ /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 
 
-/*******************/
-/* General objects */
-/*******************/
+ /*******************/
+ /* General objects */
+ /*******************/
 #define VARIOMETER_STATE_INITIAL 0
 #define VARIOMETER_STATE_DATE_RECORDED 1
 #define VARIOMETER_STATE_CALIBRATED 2
@@ -114,7 +114,7 @@ unsigned long lastLowFreqUpdate = 0;
 #define VARIOSCREEN_MUTE_ANCHOR_X 2
 #define VARIOSCREEN_MUTE_ANCHOR_Y 0
 
-VarioScreen screen(VARIOSCREEN_DC_PIN,VARIOSCREEN_CS_PIN,VARIOSCREEN_RST_PIN);
+VarioScreen screen(VARIOSCREEN_DC_PIN, VARIOSCREEN_CS_PIN, VARIOSCREEN_RST_PIN);
 MSUnit msunit(screen, VARIOSCREEN_VARIO_ANCHOR_X, VARIOSCREEN_VARIO_ANCHOR_Y);
 MUnit munit(screen, VARIOSCREEN_ALTI_ANCHOR_X, VARIOSCREEN_ALTI_ANCHOR_Y);
 ScreenDigit altiDigit(screen, VARIOSCREEN_ALTI_ANCHOR_X, VARIOSCREEN_ALTI_ANCHOR_Y, 0, false);
@@ -138,20 +138,20 @@ BATLevel batLevel(screen, VARIOSCREEN_BAT_ANCHOR_X, VARIOSCREEN_BAT_ANCHOR_Y, VO
 
 ScreenSchedulerObject displayList[] = { {&msunit, 0}, {&munit, 0}, {&altiDigit, 0}, {&varioDigit, 0}
 #ifdef HAVE_GPS
-                                       ,{&kmhunit, 0}, {&grunit, 0}, {&speedDigit, 0}, {&ratioDigit, 0}, {&satLevel, 0}, {&screenTime, 1}, {&screenElapsedTime, 1}
+													,{&kmhunit, 0}, {&grunit, 0}, {&speedDigit, 0}, {&ratioDigit, 0}, {&satLevel, 0}, {&screenTime, 1}, {&screenElapsedTime, 1}
 #endif //HAVE_GPS
 #ifdef HAVE_ACCELEROMETER
-                                       ,{&muteIndicator, 0}
+													,{&muteIndicator, 0}
 #endif //HAVE_ACCELEROMETER
 #ifdef HAVE_VOLTAGE_DIVISOR
-                                       , {&batLevel, 0}
+													, {&batLevel, 0}
 #endif //HAVE_VOLTAGE_DIVISOR
 };
 
 #ifdef HAVE_GPS
-ScreenScheduler varioScreen(screen, displayList, sizeof(displayList)/sizeof(ScreenSchedulerObject), 0, 1);
+ScreenScheduler varioScreen(screen, displayList, sizeof(displayList) / sizeof(ScreenSchedulerObject), 0, 1);
 #else
-ScreenScheduler varioScreen(screen, displayList, sizeof(displayList)/sizeof(ScreenSchedulerObject), 0, 0);
+ScreenScheduler varioScreen(screen, displayList, sizeof(displayList) / sizeof(ScreenSchedulerObject), 0, 0);
 #endif //HAVE_GPS
 
 #endif //HAVE_SCREEN
@@ -181,10 +181,10 @@ beeper beeper(VARIOMETER_SINKING_THRESHOLD, VARIOMETER_CLIMBING_THRESHOLD, VARIO
 #ifdef HAVE_GPS
 #ifdef VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE
 /* unsure period divide GPS_PERIOD */
-constexpr double historyGPSPeriodCountF = (double)(VARIOMETER_INTEGRATED_CLIMB_RATE_DISPLAY_FREQ)*(double)(GPS_PERIOD)/(1000.0);
+constexpr double historyGPSPeriodCountF = (double)(VARIOMETER_INTEGRATED_CLIMB_RATE_DISPLAY_FREQ)*(double)(GPS_PERIOD) / (1000.0);
 constexpr int8_t historyGPSPeriodCount = (int8_t)(0.5 + historyGPSPeriodCountF);
 
-constexpr double historyPeriodF = (double)(GPS_PERIOD)/(double)(historyGPSPeriodCount);
+constexpr double historyPeriodF = (double)(GPS_PERIOD) / (double)(historyGPSPeriodCount);
 constexpr unsigned historyPeriod = (unsigned)(0.5 + historyPeriodF);
 #else
 /* GPS give the period */
@@ -192,13 +192,13 @@ constexpr int8_t historyGPSPeriodCount = 1;
 constexpr unsigned historyPeriod = GPS_PERIOD;
 #endif //VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE
 
-constexpr double historyCountF = (double)(VARIOMETER_GLIDE_RATIO_INTEGRATION_TIME)/(double)historyPeriod;
+constexpr double historyCountF = (double)(VARIOMETER_GLIDE_RATIO_INTEGRATION_TIME) / (double)historyPeriod;
 constexpr int8_t historyCount = (int8_t)(0.5 + historyCountF);
 #else //!HAVE_GPS
-constexpr double historyCountF = (double)(VARIOMETER_INTEGRATED_CLIMB_RATE_DISPLAY_FREQ)*(double)(VARIOMETER_CLIMB_RATE_INTEGRATION_TIME)/(1000.0);
+constexpr double historyCountF = (double)(VARIOMETER_INTEGRATED_CLIMB_RATE_DISPLAY_FREQ)*(double)(VARIOMETER_CLIMB_RATE_INTEGRATION_TIME) / (1000.0);
 constexpr int8_t historyCount = (int8_t)(0.5 + historyCountF);
 
-constexpr double historyPeriodF = (double)(VARIOMETER_CLIMB_RATE_INTEGRATION_TIME)/(double)historyCount;
+constexpr double historyPeriodF = (double)(VARIOMETER_CLIMB_RATE_INTEGRATION_TIME) / (double)historyCount;
 constexpr unsigned historyPeriod = (unsigned)(0.5 + historyPeriodF);
 #endif //HAVE_GPS
 
@@ -216,7 +216,7 @@ FlightHistory<historyPeriod, historyCount> history;
 #if VARIOMETER_CLIMB_RATE_INTEGRATION_TIME > VARIOMETER_GLIDE_RATIO_INTEGRATION_TIME
 #error VARIOMETER_CLIMB_RATE_INTEGRATION_TIME must be less or equal than VARIOMETER_GLIDE_RATIO_INTEGRATION_TIME
 #endif
-constexpr double historyClimbRatePeriodCountF = (double)(VARIOMETER_CLIMB_RATE_INTEGRATION_TIME)/(double)historyPeriod;
+constexpr double historyClimbRatePeriodCountF = (double)(VARIOMETER_CLIMB_RATE_INTEGRATION_TIME) / (double)historyPeriod;
 constexpr int8_t historyClimbRatePeriodCount = (int8_t)historyClimbRatePeriodCountF;
 #endif
 
@@ -267,13 +267,14 @@ unsigned long lastVarioSentenceTimestamp = 0;
 
 #if defined(HAVE_ACCELEROMETER) && defined(HAVE_SPEAKER) 
 /* tap callback : mute/unmute beeper */
-void beeperTapCallback(unsigned char direction, unsigned char count) { 
+void beeperTapCallback(unsigned char direction, unsigned char count)
+{
 
-  static bool muted = false;
-  muted = !muted;
-  toneACMute(muted);
+	static bool muted = false;
+	muted = !muted;
+	toneACMute(muted);
 #ifdef HAVE_SCREEN
-  muteIndicator.setMuteState(muted);
+	muteIndicator.setMuteState(muted);
 #endif //HAVE_SCREEN
 }
 #endif //defined(HAVE_ACCELEROMETER) && defined(HAVE_SPEAKER) 
@@ -282,83 +283,86 @@ void beeperTapCallback(unsigned char direction, unsigned char count) {
 /*-----------------*/
 /*      SETUP      */
 /*-----------------*/
-void setup() {
+void setup()
+{
 
-  /*****************************/
-  /* wait for devices power on */
-  /*****************************/
-  delay(VARIOMETER_POWER_ON_DELAY);
+	/*****************************/
+	/* wait for devices power on */
+	/*****************************/
+	delay(VARIOMETER_POWER_ON_DELAY);
 
-  /**************************/
-  /* init Two Wires devices */
-  /**************************/
-  intTW.begin();
-  twScheduler.init();
+	/**************************/
+	/* init Two Wires devices */
+	/**************************/
+	intTW.begin();
+	twScheduler.init();
 #ifdef HAVE_ACCELEROMETER
-  if( firmwareUpdateCondTWS() ) {
-   firmwareUpdate();
-  }
-  fastMPUSetTapCallback(beeperTapCallback);
+	if (firmwareUpdateCondTWS())
+	{
+		firmwareUpdate();
+	}
+	fastMPUSetTapCallback(beeperTapCallback);
 #endif //HAVE_ACCELEROMETER
 
-  /************/
-  /* init SPI */
-  /************/ 
+	/************/
+	/* init SPI */
+	/************/
 
-  /* set all SPI CS lines before talking to devices */
+	/* set all SPI CS lines before talking to devices */
 #if defined(HAVE_SDCARD) && defined(HAVE_GPS)
-  file.enableSPI();
+	file.enableSPI();
 #endif //defined(HAVE_SDCARD) && defined(HAVE_GPS)
 
 #ifdef HAVE_SCREEN
-  screen.enableSPI();
+	screen.enableSPI();
 #endif //HAVE_SCREEN
 
-  /****************/
-  /* init SD Card */
-  /****************/
+	/****************/
+	/* init SD Card */
+	/****************/
 #if defined(HAVE_SDCARD) && defined(HAVE_GPS)
-  if( file.init() >= 0 ) {
-    sdcardState = SDCARD_STATE_INITIALIZED;  //useless to set error
-  }
+	if (file.init() >= 0)
+	{
+		sdcardState = SDCARD_STATE_INITIALIZED;  //useless to set error
+	}
 #endif //defined(HAVE_SDCARD) && defined(HAVE_GPS)
- 
-  /***************/
-  /* init screen */
-  /***************/
+
+	/***************/
+	/* init screen */
+	/***************/
 #ifdef HAVE_SCREEN
-  screen.begin(VARIOSCREEN_CONTRAST);
+	screen.begin(VARIOSCREEN_CONTRAST);
 #endif //HAVE_SCREEN
-  
-  /**************************/
-  /* init gps and bluetooth */
-  /**************************/
+
+	/**************************/
+	/* init gps and bluetooth */
+	/**************************/
 #if defined(HAVE_BLUETOOTH) || defined(HAVE_GPS)
 #ifdef HAVE_GPS
-  serialNmea.begin(GPS_BLUETOOTH_BAUDS, true);
+	serialNmea.begin(GPS_BLUETOOTH_BAUDS, true);
 #else
-  serialNmea.begin(GPS_BLUETOOTH_BAUDS, false);
+	serialNmea.begin(GPS_BLUETOOTH_BAUDS, false);
 #endif //HAVE_GPS
 #endif //defined(HAVE_BLUETOOTH) || defined(HAVE_GPS)
-  
-  /******************/
-  /* get first data */
-  /******************/
-  
-  /* wait for first alti */
-  while( ! twScheduler.havePressure() ) { }
-  
-  /* init kalman filter with 0.0 accel */
-  double firstAlti = twScheduler.getAlti();
-  kalmanvert.init(firstAlti,
-                  0.0,
-                  POSITION_MEASURE_STANDARD_DEVIATION,
-                  ACCELERATION_MEASURE_STANDARD_DEVIATION,
-                  millis());
-                  
-  /* init history */
+
+	/******************/
+	/* get first data */
+	/******************/
+
+	/* wait for first alti */
+	while (!twScheduler.havePressure()) {}
+
+	/* init kalman filter with 0.0 accel */
+	double firstAlti = twScheduler.getAlti();
+	kalmanvert.init(firstAlti,
+		0.0,
+		POSITION_MEASURE_STANDARD_DEVIATION,
+		ACCELERATION_MEASURE_STANDARD_DEVIATION,
+		millis());
+
+	/* init history */
 #if defined(HAVE_GPS) || defined(VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE)
-  history.init(firstAlti, millis());
+	history.init(firstAlti, millis());
 #endif //defined(HAVE_GPS) || defined(VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE)
 }
 
@@ -370,273 +374,309 @@ void enableflightStartComponents(void);
 /*----------------*/
 /*      LOOP      */
 /*----------------*/
-void loop() {
- 
-  /*****************************/
-  /* compute vertical velocity */
-  /*****************************/
+void loop()
+{
+
+	/*****************************/
+	/* compute vertical velocity */
+	/*****************************/
 #ifdef HAVE_ACCELEROMETER
-  if( twScheduler.havePressure() && twScheduler.haveAccel() ) {
-    kalmanvert.update( twScheduler.getAlti(),
-                       twScheduler.getAccel(NULL),
-                       millis() );
+	if (twScheduler.havePressure() && twScheduler.haveAccel())
+	{
+		kalmanvert.update(twScheduler.getAlti(),
+			twScheduler.getAccel(NULL),
+			millis());
 #else
-  if( twScheduler.havePressure() ) {
-    kalmanvert.update( twScheduler.getAlti(),
-                       0.0,
-                       millis() );
+	if (twScheduler.havePressure())
+	{
+		kalmanvert.update(twScheduler.getAlti(),
+			0.0,
+			millis());
 #endif //HAVE_ACCELEROMETER
 
-    /* set beeper */
+		/* set beeper */
 #ifdef HAVE_SPEAKER
-    beeper.setVelocity( kalmanvert.getVelocity() );
+		beeper.setVelocity(kalmanvert.getVelocity());
 #endif //HAVE_SPEAKER
 
-    /* set history */
+		/* set history */
 #if defined(HAVE_GPS) || defined(VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE)
-    history.setAlti(kalmanvert.getCalibratedPosition(), millis());
+		history.setAlti(kalmanvert.getCalibratedPosition(), millis());
 #endif
 
-    /* set screen */
+		/* set screen */
 #ifdef HAVE_SCREEN
-    altiDigit.setValue(kalmanvert.getCalibratedPosition());
+		altiDigit.setValue(kalmanvert.getCalibratedPosition());
 #ifdef VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE
-    if( history.haveNewClimbRate() ) {
+		if (history.haveNewClimbRate())
+		{
 #ifdef HAVE_GPS
-      varioDigit.setValue(history.getClimbRate(historyClimbRatePeriodCount)); //climb rate period can differ from glide ratio period
+			varioDigit.setValue(history.getClimbRate(historyClimbRatePeriodCount)); //climb rate period can differ from glide ratio period
 #else //!HAVE_GPS
-      varioDigit.setValue(history.getClimbRate());
+			varioDigit.setValue(history.getClimbRate());
 #endif //HAVE_GPS
-    }
+		}
 #else //!VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE
-    varioDigit.setValue(kalmanvert.getVelocity());
+		varioDigit.setValue(kalmanvert.getVelocity());
 #endif //VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE
 #endif //HAVE_SCREEN
-   
-    
-  }
 
-  /*****************/
-  /* update beeper */
-  /*****************/
+
+	}
+
+	/*****************/
+	/* update beeper */
+	/*****************/
 #ifdef HAVE_SPEAKER
-  beeper.update();
+	beeper.update();
 #endif //HAVE_SPEAKER
 
 
-  /********************/
-  /* update bluetooth */
-  /********************/
+	/********************/
+	/* update bluetooth */
+	/********************/
 #ifdef HAVE_BLUETOOTH
 #ifdef HAVE_GPS
   /* in priority send vario nmea sentence */
-  if( bluetoothNMEA.available() ) {
-    while( bluetoothNMEA.available() ) {
-       serialNmea.write( bluetoothNMEA.get() );
-    }
-    serialNmea.release();
-  }
+	if (bluetoothNMEA.available())
+	{
+		while (bluetoothNMEA.available())
+		{
+			serialNmea.write(bluetoothNMEA.get());
+		}
+		serialNmea.release();
+	}
 #else //!HAVE_GPS
   /* check the last vario nmea sentence */
-  if( millis() - lastVarioSentenceTimestamp > VARIOMETER_SENTENCE_DELAY ) {
-    lastVarioSentenceTimestamp = millis();
+	if (millis() - lastVarioSentenceTimestamp > VARIOMETER_SENTENCE_DELAY)
+	{
+		lastVarioSentenceTimestamp = millis();
 #ifdef VARIOMETER_BLUETOOTH_SEND_CALIBRATED_ALTITUDE
-    bluetoothNMEA.begin(kalmanvert.getCalibratedPosition(), kalmanvert.getVelocity());
+		bluetoothNMEA.begin(kalmanvert.getCalibratedPosition(), kalmanvert.getVelocity());
 #else
-    bluetoothNMEA.begin(kalmanvert.getPosition(), kalmanvert.getVelocity());
+		bluetoothNMEA.begin(kalmanvert.getPosition(), kalmanvert.getVelocity());
 #endif
-    while( bluetoothNMEA.available() ) {
-       serialNmea.write( bluetoothNMEA.get() );
-    }
-  }
+		while (bluetoothNMEA.available())
+		{
+			serialNmea.write(bluetoothNMEA.get());
+		}
+	}
 #endif //!HAVE_GPS
 #endif //HAVE_BLUETOOTH
 
 
-  /**************/
-  /* update GPS */
-  /**************/
+	/**************/
+	/* update GPS */
+	/**************/
 #ifdef HAVE_GPS
 #ifdef HAVE_BLUETOOTH
   /* else try to parse GPS nmea */
-  else {
+	else
+	{
 #endif //HAVE_BLUETOOTH
-    
-    /* try to lock sentences */
-    if( serialNmea.lockRMC() ) {
-      nmeaParser.beginRMC();
-    } else if( serialNmea.lockGGA() ) {
-      nmeaParser.beginGGA();
+
+		/* try to lock sentences */
+		if (serialNmea.lockRMC())
+		{
+			nmeaParser.beginRMC();
+		}
+		else if (serialNmea.lockGGA())
+		{
+			nmeaParser.beginGGA();
 #ifdef HAVE_BLUETOOTH
-      lastSentence = true;
+			lastSentence = true;
 #endif //HAVE_BLUETOOTH
 #ifdef HAVE_SDCARD      
-      /* start to write IGC B frames */
-      if( sdcardState == SDCARD_STATE_READY ) {
+			/* start to write IGC B frames */
+			if (sdcardState == SDCARD_STATE_READY)
+			{
 #ifdef VARIOMETER_SDCARD_SEND_CALIBRATED_ALTITUDE
-        file.write( igc.begin( kalmanvert.getCalibratedPosition() ) );
+				file.write(igc.begin(kalmanvert.getCalibratedPosition()));
 #else
-        file.write( igc.begin( kalmanvert.getPosition() ) );
+				file.write(igc.begin(kalmanvert.getPosition()));
 #endif
-      }
+			}
 #endif //HAVE_SDCARD
-    }
-  
-    /* parse if needed */
-    if( nmeaParser.isParsing() ) {
-      while( nmeaParser.isParsing() ) {
-        uint8_t c = serialNmea.read();
-        
-        /* parse sentence */        
-        nmeaParser.feed( c );
+		}
+
+		/* parse if needed */
+		if (nmeaParser.isParsing())
+		{
+			while (nmeaParser.isParsing())
+			{
+				uint8_t c = serialNmea.read();
+
+				/* parse sentence */
+				nmeaParser.feed(c);
 
 #ifdef HAVE_SDCARD          
-        /* if GGA, convert to IGC and write to sdcard */
-        if( sdcardState == SDCARD_STATE_READY && nmeaParser.isParsingGGA() ) {
-          igc.feed(c);
-          while( igc.available() ) {
-            file.write( igc.get() );
-          }
-        }
+				/* if GGA, convert to IGC and write to sdcard */
+				if (sdcardState == SDCARD_STATE_READY && nmeaParser.isParsingGGA())
+				{
+					igc.feed(c);
+					while (igc.available())
+					{
+						file.write(igc.get());
+					}
+				}
 #endif //HAVE_SDCARD
-      }
-      serialNmea.release();
-    
-#ifdef HAVE_BLUETOOTH   
-      /* if this is the last GPS sentence */
-      /* we can send our sentences */
-      if( lastSentence ) {
-          lastSentence = false;
-#ifdef VARIOMETER_BLUETOOTH_SEND_CALIBRATED_ALTITUDE
-          bluetoothNMEA.begin(kalmanvert.getCalibratedPosition(), kalmanvert.getVelocity());
-#else
-          bluetoothNMEA.begin(kalmanvert.getPosition(), kalmanvert.getVelocity());
-#endif
-          serialNmea.lock(); //will be writed at next loop
-      }
-#endif //HAVE_BLUETOOTH
-    }
-  
-  
-    /***************************/
-    /* update variometer state */
-    /*    (after parsing)      */
-    /***************************/
-    if( variometerState < VARIOMETER_STATE_FLIGHT_STARTED ) {
+			}
+			serialNmea.release();
 
-      /* if initial state check if date is recorded  */
-      if( variometerState == VARIOMETER_STATE_INITIAL ) {
-        if( nmeaParser.haveDate() ) {
-          variometerState = VARIOMETER_STATE_DATE_RECORDED;
-        }
-      }
-      
-      /* check if we need to calibrate the altimeter */
-      else if( variometerState == VARIOMETER_STATE_DATE_RECORDED ) {
-        
-        /* we need a good quality value */
-        if( nmeaParser.haveNewAltiValue() && nmeaParser.precision < VARIOMETER_GPS_ALTI_CALIBRATION_PRECISION_THRESHOLD ) {
-          
-          /* calibrate */
-          double gpsAlti = nmeaParser.getAlti();
-          kalmanvert.calibratePosition(gpsAlti);
+#ifdef HAVE_BLUETOOTH   
+			/* if this is the last GPS sentence */
+			/* we can send our sentences */
+			if (lastSentence)
+			{
+				lastSentence = false;
+#ifdef VARIOMETER_BLUETOOTH_SEND_CALIBRATED_ALTITUDE
+				bluetoothNMEA.begin(kalmanvert.getCalibratedPosition(), kalmanvert.getVelocity());
+#else
+				bluetoothNMEA.begin(kalmanvert.getPosition(), kalmanvert.getVelocity());
+#endif
+				serialNmea.lock(); //will be writed at next loop
+			}
+#endif //HAVE_BLUETOOTH
+		}
+
+
+		/***************************/
+		/* update variometer state */
+		/*    (after parsing)      */
+		/***************************/
+		if (variometerState < VARIOMETER_STATE_FLIGHT_STARTED)
+		{
+
+			/* if initial state check if date is recorded  */
+			if (variometerState == VARIOMETER_STATE_INITIAL)
+			{
+				if (nmeaParser.haveDate())
+				{
+					variometerState = VARIOMETER_STATE_DATE_RECORDED;
+				}
+			}
+
+			/* check if we need to calibrate the altimeter */
+			else if (variometerState == VARIOMETER_STATE_DATE_RECORDED)
+			{
+
+				/* we need a good quality value */
+				if (nmeaParser.haveNewAltiValue() && nmeaParser.precision < VARIOMETER_GPS_ALTI_CALIBRATION_PRECISION_THRESHOLD)
+				{
+
+					/* calibrate */
+					double gpsAlti = nmeaParser.getAlti();
+					kalmanvert.calibratePosition(gpsAlti);
 #if defined(HAVE_GPS) || defined(VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE)
-          history.init(gpsAlti, millis());
+					history.init(gpsAlti, millis());
 #endif //defined(HAVE_GPS) || defined(VARIOMETER_DISPLAY_INTEGRATED_CLIMB_RATE)
 
-          variometerState = VARIOMETER_STATE_CALIBRATED;
+					variometerState = VARIOMETER_STATE_CALIBRATED;
 #if defined(HAVE_SDCARD) && ! defined(VARIOMETER_RECORD_WHEN_FLIGHT_START)
-          createSDCardTrackFile();
+					createSDCardTrackFile();
 #endif //defined(HAVE_SDCARD) && ! defined(VARIOMETER_RECORD_WHEN_FLIGHT_START)
-        }
-      }
-      
-      /* else check if the flight have started */
-      else {  //variometerState == VARIOMETER_STATE_CALIBRATED
-        
-        /* check flight start condition */
-        if( (millis() > FLIGHT_START_MIN_TIMESTAMP) &&
-            (kalmanvert.getVelocity() < FLIGHT_START_VARIO_LOW_THRESHOLD || kalmanvert.getVelocity() > FLIGHT_START_VARIO_HIGH_THRESHOLD) &&
-            (nmeaParser.getSpeed() > FLIGHT_START_MIN_SPEED) ) {
-          variometerState = VARIOMETER_STATE_FLIGHT_STARTED;
-          enableflightStartComponents();
-        }
-      }
-    }
+				}
+			}
+
+			/* else check if the flight have started */
+			else
+			{  //variometerState == VARIOMETER_STATE_CALIBRATED
+
+	  /* check flight start condition */
+				if ((millis() > FLIGHT_START_MIN_TIMESTAMP) &&
+					(kalmanvert.getVelocity() < FLIGHT_START_VARIO_LOW_THRESHOLD || kalmanvert.getVelocity() > FLIGHT_START_VARIO_HIGH_THRESHOLD) &&
+					(nmeaParser.getSpeed() > FLIGHT_START_MIN_SPEED))
+				{
+					variometerState = VARIOMETER_STATE_FLIGHT_STARTED;
+					enableflightStartComponents();
+				}
+			}
+		}
 #ifdef HAVE_BLUETOOTH
-  }
+	}
 #endif //HAVE_BLUETOOTH
 #endif //HAVE_GPS
 
-  /* if no GPS, we can't calibrate, and we have juste to check flight start */
+	/* if no GPS, we can't calibrate, and we have juste to check flight start */
 #ifndef HAVE_GPS
-  if( variometerState == VARIOMETER_STATE_CALIBRATED ) { //already calibrated at start 
-    if( (millis() > FLIGHT_START_MIN_TIMESTAMP) &&
-        (kalmanvert.getVelocity() < FLIGHT_START_VARIO_LOW_THRESHOLD || kalmanvert.getVelocity() > FLIGHT_START_VARIO_HIGH_THRESHOLD) ) {
-      variometerState = VARIOMETER_STATE_FLIGHT_STARTED;
-      enableflightStartComponents();
-    }
-  }
+	if (variometerState == VARIOMETER_STATE_CALIBRATED)
+	{ //already calibrated at start 
+		if ((millis() > FLIGHT_START_MIN_TIMESTAMP) &&
+			(kalmanvert.getVelocity() < FLIGHT_START_VARIO_LOW_THRESHOLD || kalmanvert.getVelocity() > FLIGHT_START_VARIO_HIGH_THRESHOLD))
+		{
+			variometerState = VARIOMETER_STATE_FLIGHT_STARTED;
+			enableflightStartComponents();
+		}
+	}
 #endif // !HAVE_GPS
 
-  /**********************************/
-  /* update low freq screen objects */
-  /**********************************/
+	/**********************************/
+	/* update low freq screen objects */
+	/**********************************/
 #ifdef HAVE_SCREEN
-  unsigned long lowFreqDuration = millis() - lastLowFreqUpdate;
-  if( varioScreen.getPage() == 0 ) {
-    if( lowFreqDuration > VARIOMETER_BASE_PAGE_DURATION ) {
+	unsigned long lowFreqDuration = millis() - lastLowFreqUpdate;
+	if (varioScreen.getPage() == 0)
+	{
+		if (lowFreqDuration > VARIOMETER_BASE_PAGE_DURATION)
+		{
 #ifdef HAVE_GPS //no multipage without GPS
-      varioScreen.nextPage();
-    }
-  } else { //page == 1
-    if( lowFreqDuration > VARIOMETER_BASE_PAGE_DURATION + VARIOMETER_ALTERNATE_PAGE_DURATION ) {
+			varioScreen.nextPage();
+		}
+	}
+	else
+	{ //page == 1
+		if (lowFreqDuration > VARIOMETER_BASE_PAGE_DURATION + VARIOMETER_ALTERNATE_PAGE_DURATION)
+		{
 #endif //HAVE_GPS multipage support
-      lastLowFreqUpdate = millis();
+			lastLowFreqUpdate = millis();
 
 #ifdef HAVE_GPS
-      /* set time */
-      screenTime.setTime( nmeaParser.time );
-      screenTime.correctTimeZone( VARIOMETER_TIME_ZONE );
-      screenElapsedTime.setCurrentTime( screenTime.getTime() );
+			/* set time */
+			screenTime.setTime(nmeaParser.time);
+			screenTime.correctTimeZone(VARIOMETER_TIME_ZONE);
+			screenElapsedTime.setCurrentTime(screenTime.getTime());
 
-      /* update satelite count */
-      satLevel.setSatelliteCount( nmeaParser.satelliteCount );
+			/* update satelite count */
+			satLevel.setSatelliteCount(nmeaParser.satelliteCount);
 #endif //HAVE_GPS  
 
 #ifdef HAVE_VOLTAGE_DIVISOR
-      /* update battery level */
-      batLevel.setVoltage( analogRead(VOLTAGE_DIVISOR_PIN) );
+			/* update battery level */
+			batLevel.setVoltage(analogRead(VOLTAGE_DIVISOR_PIN));
 #endif //HAVE_VOLTAGE_DIVISOR
 
 #ifdef HAVE_GPS //no multipage without GPS
-      varioScreen.nextPage();
+			varioScreen.nextPage();
 #endif //HAVE_GPS multipage support      
-    }
-  }
+		}
+	}
 
-   
-  /*****************/
-  /* update screen */
-  /*****************/
+
+	/*****************/
+	/* update screen */
+	/*****************/
 #ifdef HAVE_GPS
   /* when getting speed from gps, display speed and ratio */
-  if ( nmeaParser.haveNewSpeedValue() ) {
+	if (nmeaParser.haveNewSpeedValue())
+	{
 
-    double currentSpeed = nmeaParser.getSpeed();
-    double ratio = history.getGlideRatio(currentSpeed, serialNmea.getReceiveTimestamp());
+		double currentSpeed = nmeaParser.getSpeed();
+		double ratio = history.getGlideRatio(currentSpeed, serialNmea.getReceiveTimestamp());
 
-    speedDigit.setValue( currentSpeed );
-    if( currentSpeed >= RATIO_MIN_SPEED && ratio >= 0.0 && ratio < RATIO_MAX_VALUE ) {
-      ratioDigit.setValue(ratio);
-    } else {
-      ratioDigit.setValue(0.0);
-    }
-  }
+		speedDigit.setValue(currentSpeed);
+		if (currentSpeed >= RATIO_MIN_SPEED && ratio >= 0.0 && ratio < RATIO_MAX_VALUE)
+		{
+			ratioDigit.setValue(ratio);
+		}
+		else
+		{
+			ratioDigit.setValue(0.0);
+		}
+	}
 #endif //HAVE_GPS
 
-  /* screen update */
-  varioScreen.displayStep();
+	/* screen update */
+	varioScreen.displayStep();
 
 #endif //HAVE_SCREEN 
 }
@@ -644,77 +684,88 @@ void loop() {
 
 
 #if defined(HAVE_SDCARD) && defined(HAVE_GPS)
-void createSDCardTrackFile(void) {
-  /* start the sdcard record */
-  if( sdcardState == SDCARD_STATE_INITIALIZED ) {
+void createSDCardTrackFile(void)
+{
+	/* start the sdcard record */
+	if (sdcardState == SDCARD_STATE_INITIALIZED)
+	{
 
-    /* some cards doesn't like delays between init and write, so reinit */
-    file.init();
+		/* some cards doesn't like delays between init and write, so reinit */
+		file.init();
 
-    /* build date : convert from DDMMYY to YYMMDD */
-    uint8_t dateChar[8]; //two bytes are used for incrementing number on filename
-    uint8_t* dateCharP = dateChar;
-    uint32_t date = nmeaParser.date;
-    for(uint8_t i=0; i<3; i++) {
-      uint8_t num = ((uint8_t)(date%100));
-      dateCharP[0] = (num/10) + '0';
-      dateCharP[1] = (num%10) + '0';
-      dateCharP += 2;
-      date /= 100;
-    }
+		/* build date : convert from DDMMYY to YYMMDD */
+		uint8_t dateChar[8]; //two bytes are used for incrementing number on filename
+		uint8_t* dateCharP = dateChar;
+		uint32_t date = nmeaParser.date;
+		for (uint8_t i = 0; i < 3; i++)
+		{
+			uint8_t num = ((uint8_t)(date % 100));
+			dateCharP[0] = (num / 10) + '0';
+			dateCharP[1] = (num % 10) + '0';
+			dateCharP += 2;
+			date /= 100;
+		}
 
-    /* create file */    
-    if( file.begin((char*)dateChar, 8) >= 0 ) {
-      sdcardState = SDCARD_STATE_READY;
-            
-      /* write the header */
-      int16_t datePos = header.begin();
-      if( datePos >= 0 ) {
-        while( datePos ) {
-        file.write(header.get());
-          datePos--;
-        }
+		/* create file */
+		if (file.begin((char*)dateChar, 8) >= 0)
+		{
+			sdcardState = SDCARD_STATE_READY;
 
-        /* write date : DDMMYY */
-        uint8_t* dateCharP = &dateChar[4];
-        for(int i=0; i<3; i++) {
-          file.write(dateCharP[0]);
-          file.write(dateCharP[1]);
-          header.get();
-          header.get();
-          dateCharP -= 2;
-        }
-            
-        while( header.available() ) {
-          file.write(header.get());
-        }
-      }
-    } else {
-      sdcardState = SDCARD_STATE_ERROR; //avoid retry 
-    }
-  }
+			/* write the header */
+			int16_t datePos = header.begin();
+			if (datePos >= 0)
+			{
+				while (datePos)
+				{
+					file.write(header.get());
+					datePos--;
+				}
+
+				/* write date : DDMMYY */
+				uint8_t* dateCharP = &dateChar[4];
+				for (int i = 0; i < 3; i++)
+				{
+					file.write(dateCharP[0]);
+					file.write(dateCharP[1]);
+					header.get();
+					header.get();
+					dateCharP -= 2;
+				}
+
+				while (header.available())
+				{
+					file.write(header.get());
+				}
+			}
+		}
+		else
+		{
+			sdcardState = SDCARD_STATE_ERROR; //avoid retry 
+		}
+	}
 }
 #endif //defined(HAVE_SDCARD) && defined(HAVE_GPS)
 
 
 
-void enableflightStartComponents(void) {
-  /* set base time */
+void enableflightStartComponents(void)
+{
+	/* set base time */
 #if defined(HAVE_SCREEN) && defined(HAVE_GPS)
-  screenElapsedTime.setBaseTime( screenTime.getTime() );
+	screenElapsedTime.setBaseTime(screenTime.getTime());
 #endif //defined(HAVE_SCREEN) && defined(HAVE_GPS)
 
-  /* enable near climbing */
+	/* enable near climbing */
 #ifdef HAVE_SPEAKER
 #ifdef VARIOMETER_ENABLE_NEAR_CLIMBING_ALARM
-  beeper.setGlidingAlarmState(true);
+	beeper.setGlidingAlarmState(true);
 #endif
 #ifdef VARIOMETER_ENABLE_NEAR_CLIMBING_BEEP
-  beeper.setGlidingBeepState(true);
+	beeper.setGlidingBeepState(true);
 #endif
 #endif //HAVE_SPEAKER
 
 #if defined(HAVE_SDCARD) && defined(HAVE_GPS) && defined(VARIOMETER_RECORD_WHEN_FLIGHT_START)
-  createSDCardTrackFile();
+	createSDCardTrackFile();
 #endif // defined(HAVE_SDCARD) && defined(VARIOMETER_RECORD_WHEN_FLIGHT_START)
 }

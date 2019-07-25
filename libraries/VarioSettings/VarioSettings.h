@@ -1,7 +1,7 @@
 /* VarioSettings -- Main configuration file
  *
  * Copyright 2016-2019 Baptiste PELLEGRIN
- * 
+ *
  * This file is part of GNUVario.
  *
  * GNUVario is free software: you can redistribute it and/or modify
@@ -21,19 +21,19 @@
 #ifndef VARIO_SETTINGS_H
 #define VARIO_SETTINGS_H
 
-/*----------------------------*/
-/*          SOFTWARE          */
-/*      Vario parameters      */
-/*                            */
-/*----------------------------*/
+ /*----------------------------*/
+ /*          SOFTWARE          */
+ /*      Vario parameters      */
+ /*                            */
+ /*----------------------------*/
 
-/* Set your personnal info here and launch */
-/* the SetVarioParameters Sketch to store  */
-/* them in EEPROM.                         */
+ /* Set your personnal info here and launch */
+ /* the SetVarioParameters Sketch to store  */
+ /* them in EEPROM.                         */
 
-/* ------ !!! Run SetVarioParameters.ino !!! ---------*/
-/*        !!! Only when you change one   !!!          */
-/*        !!! of these 3 settings.       !!!          */
+ /* ------ !!! Run SetVarioParameters.ino !!! ---------*/
+ /*        !!! Only when you change one   !!!          */
+ /*        !!! of these 3 settings.       !!!          */
 #define VARIOMETER_MODEL "GNUVario"
 #define VARIOMETER_PILOT_NAME "Prunk Dump"
 #define VARIOMETER_GLIDER_NAME "ITV Dolpo 2"
@@ -103,7 +103,7 @@
 
 /* Set the GPS precision needed to use the GPS altitude value  */
 /* to calibrate the barometric altitude.                       */
-/*      !!! the best possible precision is 100 !!!             */ 
+/*      !!! the best possible precision is 100 !!!             */
 #define VARIOMETER_GPS_ALTI_CALIBRATION_PRECISION_THRESHOLD 350
 
 
@@ -117,7 +117,7 @@
 //#define VARIOMETER_SDCARD_SEND_CALIBRATED_ALTITUDE
 //#define VARIOMETER_BLUETOOTH_SEND_CALIBRATED_ALTITUDE
 
-/* GPS track recording on SD card starting condition :  */ 
+/* GPS track recording on SD card starting condition :  */
 /* -> As soon as possible (GPS fix)                     */
 /* -> When flight start is detected                     */
 //#define VARIOMETER_RECORD_WHEN_FLIGHT_START
@@ -129,7 +129,7 @@
 #define VARIOMETER_SENT_LXNAV_SENTENCE
 
 /* When there is no GPS to sync variometer bluetooth sentences */
-/* set the delay between sendings in milliseconds.             */ 
+/* set the delay between sendings in milliseconds.             */
 #define VARIOMETER_SENTENCE_DELAY 2000
 
 
@@ -140,13 +140,13 @@
 /*----------------------------*/
 
 /* Comment or uncomment according to  */
-/* what you embed in the variometer   */ 
+/* what you embed in the variometer   */
 #define HAVE_SPEAKER
 #define HAVE_ACCELEROMETER
-#define HAVE_SCREEN
+//#define HAVE_SCREEN
 #define HAVE_GPS
-#define HAVE_SDCARD
-#define HAVE_BLUETOOTH
+//#define HAVE_SDCARD
+//#define HAVE_BLUETOOTH
 #define HAVE_VOLTAGE_DIVISOR
 
 /* ms5611 parameters */
@@ -156,7 +156,7 @@
 
 /* We advice using the ms5611 barometer */
 /* but if you want to use the BMP280 you can enable it here */
-//#define HAVE_BMP280
+#define HAVE_BMP280
 #define BMP280_STATIC_ADDRESS 0x76
 //#define BMP280_STATIC_CALIBRATION {{0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00}}
 

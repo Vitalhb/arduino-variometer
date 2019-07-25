@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{07e71e97-ffa3-4ab1-81f0-3a104db0a1cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly">
+      <UniqueIdentifier>{6b98625c-d4a8-46ce-936f-e318fe601d26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\core">
+      <UniqueIdentifier>{42049ff3-548f-4d12-a3af-30f53eeff0e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries">
+      <UniqueIdentifier>{528859dc-ce94-425a-8f1f-f717f554021c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\SPI">
+      <UniqueIdentifier>{8bfcd1a4-4f2f-491d-aa19-039cf111187d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\VarioSettings">
+      <UniqueIdentifier>{77503510-5a1e-4291-9d90-df31eb1dc14c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\IntTW">
+      <UniqueIdentifier>{01ffb37a-0948-453a-addf-6596d1f22495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\ms5611">
+      <UniqueIdentifier>{30366c77-2b7d-46f8-b8a8-3fdf796199ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\vertaccel">
+      <UniqueIdentifier>{0460c106-a21c-4f88-8c8c-e487ea38f848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\EEPROM">
+      <UniqueIdentifier>{79cad712-34d5-4e64-b559-4958cc35d0d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\LightInvensense">
+      <UniqueIdentifier>{52395ee9-f6f0-4909-97ae-58b5a705473f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\TwoWireScheduler">
+      <UniqueIdentifier>{c0c4c47c-0a5e-4221-bc72-326138b58570}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\kalmanvert">
+      <UniqueIdentifier>{fa3526cd-153f-4d03-b451-5b7eb0f14441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\beeper">
+      <UniqueIdentifier>{99ce9262-6178-4d74-9255-9c7b58f8931f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\varioscreen">
+      <UniqueIdentifier>{2106c213-6c9e-4c1d-83be-3ef421388512}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\digit">
+      <UniqueIdentifier>{a1682779-59e1-4fc1-b9ae-59261e47434f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\LightFat16">
+      <UniqueIdentifier>{d87c6bef-35c0-4e11-b189-08bbb536d568}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\SerialNmea">
+      <UniqueIdentifier>{abd0f885-7b02-42ad-9001-eaa6680d1fc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\NmeaParser">
+      <UniqueIdentifier>{9ff73d2c-4eef-404b-999f-2dff3934d44f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\FirmwareUpdaterTWS">
+      <UniqueIdentifier>{c8064ee2-d0ef-46c9-9888-c316cd27c46f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\FlightHistory">
+      <UniqueIdentifier>{0e6edb05-49c3-4e6e-94f5-9b9d63b55a4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\LPtoneAC">
+      <UniqueIdentifier>{16e0f448-7a65-41e3-9f0f-81797dfe2ae2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\GpsSentences">
+      <UniqueIdentifier>{72f5b02c-9daa-49ba-a9f1-3d8982a81615}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="variometer.ino" />
+    <None Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\wiring_pulse.S">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </None>
+    <None Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\library.properties">
+      <Filter>src\_micro-api-readonly\libraries\SPI</Filter>
+    </None>
+    <None Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\EEPROM\library.properties">
+      <Filter>src\_micro-api-readonly\libraries\EEPROM</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.variometer.vsarduino.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Arduino.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\binary.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Client.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\HardwareSerial.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\HardwareSerial_private.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\IPAddress.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\new.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\PluggableUSB.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Print.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Printable.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Server.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Stream.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Udp.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\USBAPI.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\USBCore.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\USBDesc.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\WCharacter.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\wiring_private.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\WString.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\variants\eightanaloginputs\pins_arduino.h">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\src\SPI.h">
+      <Filter>src\_micro-api-readonly\libraries\SPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\VarioSettings\VarioSettings.h">
+      <Filter>src\_micro-api-readonly\libraries\VarioSettings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\IntTW\IntTW.h">
+      <Filter>src\_micro-api-readonly\libraries\IntTW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\ms5611\ms5611.h">
+      <Filter>src\_micro-api-readonly\libraries\ms5611</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\vertaccel\vertaccel.h">
+      <Filter>src\_micro-api-readonly\libraries\vertaccel</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\EEPROM\src\EEPROM.h">
+      <Filter>src\_micro-api-readonly\libraries\EEPROM</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightInvensense\InvenSense_defines.h">
+      <Filter>src\_micro-api-readonly\libraries\LightInvensense</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightInvensense\LightInvensense.h">
+      <Filter>src\_micro-api-readonly\libraries\LightInvensense</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\TwoWireScheduler\TwoWireScheduler.h">
+      <Filter>src\_micro-api-readonly\libraries\TwoWireScheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\kalmanvert\kalmanvert.h">
+      <Filter>src\_micro-api-readonly\libraries\kalmanvert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\beeper\beeper.h">
+      <Filter>src\_micro-api-readonly\libraries\beeper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\varioscreen\varioscreen.h">
+      <Filter>src\_micro-api-readonly\libraries\varioscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\digit\digit.h">
+      <Filter>src\_micro-api-readonly\libraries\digit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightFat16\Fat16Config.h">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightFat16\LightFat16.h">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightFat16\SdCard.h">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\SerialNmea\SerialNmea.h">
+      <Filter>src\_micro-api-readonly\libraries\SerialNmea</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\NmeaParser\NmeaParser.h">
+      <Filter>src\_micro-api-readonly\libraries\NmeaParser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\FirmwareUpdaterTWS\FirmwareUpdaterTWS.h">
+      <Filter>src\_micro-api-readonly\libraries\FirmwareUpdaterTWS</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\FlightHistory\FlightHistory.h">
+      <Filter>src\_micro-api-readonly\libraries\FlightHistory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LPtoneAC\toneAC.h">
+      <Filter>src\_micro-api-readonly\libraries\LPtoneAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\GpsSentences\IGCSentence.h">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\GpsSentences\LK8Sentence.h">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\GpsSentences\LxnavSentence.h">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\abi.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\CDC.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\HardwareSerial.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\HardwareSerial0.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\HardwareSerial1.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\HardwareSerial2.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\HardwareSerial3.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\hooks.c">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\IPAddress.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\main.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\new.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\PluggableUSB.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Print.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Stream.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Tone.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\USBCore.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\WInterrupts.c">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\wiring.c">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\wiring_analog.c">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\wiring_digital.c">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\wiring_pulse.c">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\wiring_shift.c">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\WMath.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\WString.cpp">
+      <Filter>src\_micro-api-readonly\core</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\src\SPI.cpp">
+      <Filter>src\_micro-api-readonly\libraries\SPI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\IntTW\IntTW.cpp">
+      <Filter>src\_micro-api-readonly\libraries\IntTW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\ms5611\ms5611.cpp">
+      <Filter>src\_micro-api-readonly\libraries\ms5611</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\vertaccel\vertaccel.cpp">
+      <Filter>src\_micro-api-readonly\libraries\vertaccel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\LightInvensense\LightInvensense.cpp">
+      <Filter>src\_micro-api-readonly\libraries\LightInvensense</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\TwoWireScheduler\TwoWireScheduler.cpp">
+      <Filter>src\_micro-api-readonly\libraries\TwoWireScheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\kalmanvert\kalmanvert.cpp">
+      <Filter>src\_micro-api-readonly\libraries\kalmanvert</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\beeper\beeper.cpp">
+      <Filter>src\_micro-api-readonly\libraries\beeper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\varioscreen\varioscreen.cpp">
+      <Filter>src\_micro-api-readonly\libraries\varioscreen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\digit\digit.cpp">
+      <Filter>src\_micro-api-readonly\libraries\digit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\LightFat16\LightFat16.cpp">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\LightFat16\SdCard.cpp">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\SerialNmea\SerialNmea.cpp">
+      <Filter>src\_micro-api-readonly\libraries\SerialNmea</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\NmeaParser\NmeaParser.cpp">
+      <Filter>src\_micro-api-readonly\libraries\NmeaParser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\FirmwareUpdaterTWS\FirmwareUpdaterTWS.cpp">
+      <Filter>src\_micro-api-readonly\libraries\FirmwareUpdaterTWS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\LPtoneAC\toneAC.cpp">
+      <Filter>src\_micro-api-readonly\libraries\LPtoneAC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\GpsSentences\IGCSentence.cpp">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\GpsSentences\LK8Sentence.cpp">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\GpsSentences\LxnavSentence.cpp">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\keywords.txt">
+      <Filter>src\_micro-api-readonly\libraries\SPI</Filter>
+    </Text>
+    <Text Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\EEPROM\keywords.txt">
+      <Filter>src\_micro-api-readonly\libraries\EEPROM</Filter>
+    </Text>
+    <Text Include="..\libraries\LPtoneAC\keywords.txt">
+      <Filter>src\_micro-api-readonly\libraries\LPtoneAC</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
