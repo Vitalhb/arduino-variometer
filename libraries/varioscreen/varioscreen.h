@@ -23,7 +23,7 @@
 
 #include <Arduino.h>
 #include <SPI.h>
-#include <digit.h>
+#include "digit.h"
 
 #define VARIOSCREEN_MAX_SPI_FREQ F_CPU
 #define VARIOSCREEN_SPI_SETTINGS SPISettings(F_CPU, MSBFIRST, SPI_MODE0)

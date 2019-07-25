@@ -73,7 +73,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\variometer;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\src;$(ProjectDir)..\libraries\VarioSettings;$(ProjectDir)..\libraries\IntTW;$(ProjectDir)..\libraries\ms5611;$(ProjectDir)..\libraries\vertaccel;$(ProjectDir)..\libraries\LightInvensense;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\EEPROM\src;$(ProjectDir)..\libraries\TwoWireScheduler;$(ProjectDir)..\libraries\bmp280;$(ProjectDir)..\libraries\kalmanvert;$(ProjectDir)..\libraries\beeper;$(ProjectDir)..\libraries\LPtoneAC;$(ProjectDir)..\libraries\varioscreen;$(ProjectDir)..\libraries\digit;$(ProjectDir)..\libraries\LightFat16;$(ProjectDir)..\libraries\SerialNmea;$(ProjectDir)..\libraries\NmeaParser;$(ProjectDir)..\libraries\GpsSentences;$(ProjectDir)..\libraries\FirmwareUpdaterTWS;$(ProjectDir)..\libraries\FlightHistory;C:\arduino-1.8.9\libraries;$(ProjectDir)..\libraries;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\variants\eightanaloginputs;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\avr\include;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\avr\include\avr;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\lib\gcc\avr\4.8.1\include;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\lib\gcc\avr\4.9.2\include;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\variometer;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\src;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\EEPROM\src;$(ProjectDir)..\libraries\VarioSettings;$(ProjectDir)..\libraries\IntTW;$(ProjectDir)..\libraries\ms5611;$(ProjectDir)..\libraries\LightInvensense;$(ProjectDir)..\libraries\vertaccel;$(ProjectDir)..\libraries\bmp280;$(ProjectDir)..\libraries\TwoWireScheduler;$(ProjectDir)..\libraries\kalmanvert;$(ProjectDir)..\libraries\beeper;$(ProjectDir)..\libraries\LPtoneAC;$(ProjectDir)..\libraries\varioscreen;$(ProjectDir)..\libraries\digit;$(ProjectDir)..\libraries\LightFat16;$(ProjectDir)..\libraries\SerialNmea;$(ProjectDir)..\libraries\NmeaParser;$(ProjectDir)..\libraries\GpsSentences;$(ProjectDir)..\libraries\FirmwareUpdaterTWS;$(ProjectDir)..\libraries\FlightHistory;C:\arduino-1.8.9\libraries;$(ProjectDir)..\libraries;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino;C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\variants\eightanaloginputs;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\avr\include;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\avr\include\avr;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\lib\gcc\avr\4.8.1\include;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\lib\gcc\avr\4.9.2\include;C:\arduino-1.8.9\portable\packages\arduino\tools\avr-gcc\5.4.0-atmel3.6.1-arduino2\lib\gcc\avr\4.9.3\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ForcedIncludeFiles>$(ProjectDir)__vm\.variometer.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
       <PreprocessorDefinitions>__AVR_atmega328p__;__AVR_ATmega328P__;__AVR_ATmega328p__;F_CPU=16000000L;ARDUINO=10809;ARDUINO_AVR_NANO;ARDUINO_ARCH_AVR;__cplusplus=201103L;_VMICRO_INTELLISENSE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
@@ -109,28 +109,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\libraries\beeper\beeper.h" />
-    <ClInclude Include="..\libraries\digit\digit.h" />
-    <ClInclude Include="..\libraries\FirmwareUpdaterTWS\FirmwareUpdaterTWS.h" />
     <ClInclude Include="..\libraries\FlightHistory\FlightHistory.h" />
-    <ClInclude Include="..\libraries\GpsSentences\IGCSentence.h" />
-    <ClInclude Include="..\libraries\GpsSentences\LK8Sentence.h" />
-    <ClInclude Include="..\libraries\GpsSentences\LxnavSentence.h" />
-    <ClInclude Include="..\libraries\IntTW\IntTW.h" />
-    <ClInclude Include="..\libraries\kalmanvert\kalmanvert.h" />
-    <ClInclude Include="..\libraries\LightFat16\Fat16Config.h" />
-    <ClInclude Include="..\libraries\LightFat16\LightFat16.h" />
-    <ClInclude Include="..\libraries\LightFat16\SdCard.h" />
-    <ClInclude Include="..\libraries\LightInvensense\InvenSense_defines.h" />
-    <ClInclude Include="..\libraries\LightInvensense\LightInvensense.h" />
-    <ClInclude Include="..\libraries\LPtoneAC\toneAC.h" />
-    <ClInclude Include="..\libraries\ms5611\ms5611.h" />
-    <ClInclude Include="..\libraries\NmeaParser\NmeaParser.h" />
-    <ClInclude Include="..\libraries\SerialNmea\SerialNmea.h" />
-    <ClInclude Include="..\libraries\TwoWireScheduler\TwoWireScheduler.h" />
-    <ClInclude Include="..\libraries\varioscreen\varioscreen.h" />
-    <ClInclude Include="..\libraries\VarioSettings\VarioSettings.h" />
-    <ClInclude Include="..\libraries\vertaccel\vertaccel.h" />
     <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Arduino.h" />
     <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\binary.h" />
     <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\Client.h" />
@@ -156,24 +135,6 @@
     <ClInclude Include="__vm\.variometer.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\libraries\beeper\beeper.cpp" />
-    <ClCompile Include="..\libraries\digit\digit.cpp" />
-    <ClCompile Include="..\libraries\FirmwareUpdaterTWS\FirmwareUpdaterTWS.cpp" />
-    <ClCompile Include="..\libraries\GpsSentences\IGCSentence.cpp" />
-    <ClCompile Include="..\libraries\GpsSentences\LK8Sentence.cpp" />
-    <ClCompile Include="..\libraries\GpsSentences\LxnavSentence.cpp" />
-    <ClCompile Include="..\libraries\IntTW\IntTW.cpp" />
-    <ClCompile Include="..\libraries\kalmanvert\kalmanvert.cpp" />
-    <ClCompile Include="..\libraries\LightFat16\LightFat16.cpp" />
-    <ClCompile Include="..\libraries\LightFat16\SdCard.cpp" />
-    <ClCompile Include="..\libraries\LightInvensense\LightInvensense.cpp" />
-    <ClCompile Include="..\libraries\LPtoneAC\toneAC.cpp" />
-    <ClCompile Include="..\libraries\ms5611\ms5611.cpp" />
-    <ClCompile Include="..\libraries\NmeaParser\NmeaParser.cpp" />
-    <ClCompile Include="..\libraries\SerialNmea\SerialNmea.cpp" />
-    <ClCompile Include="..\libraries\TwoWireScheduler\TwoWireScheduler.cpp" />
-    <ClCompile Include="..\libraries\varioscreen\varioscreen.cpp" />
-    <ClCompile Include="..\libraries\vertaccel\vertaccel.cpp" />
     <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\abi.cpp" />
     <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\CDC.cpp" />
     <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\cores\arduino\HardwareSerial.cpp" />
@@ -201,7 +162,6 @@
     <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\src\SPI.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\libraries\LPtoneAC\keywords.txt" />
     <Text Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\EEPROM\keywords.txt" />
     <Text Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\keywords.txt" />
   </ItemGroup>

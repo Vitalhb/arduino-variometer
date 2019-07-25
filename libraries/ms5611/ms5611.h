@@ -22,7 +22,7 @@
 #define MS5611_H
 
 #include <Arduino.h>
-#include <VarioSettings.h>
+#include "VarioSettings.h"
 
 /* the normalized sea level pressure */  
 #define MS5611_BASE_SEA_PRESSURE 1013.25

@@ -20,21 +20,23 @@
 
 #include <Arduino.h>
 #include <SPI.h>
+#include <EEPROM.h>
+#include <avr/pgmspace.h>
 #include <VarioSettings.h>
 #include <IntTW.h>
 #include <ms5611.h>
-#include <vertaccel.h>
-#include <EEPROM.h>
+#include <InvenSense_defines.h>
 #include <LightInvensense.h>
+#include <vertaccel.h>
+#include <bmp280.h>
 #include <TwoWireScheduler.h>
 #include <kalmanvert.h>
 #include <beeper.h>
 #include <toneAC.h>
-#include <avr/pgmspace.h>
 #include <varioscreen.h>
 #include <digit.h>
-#include <SdCard.h>
 #include <LightFat16.h>
+#include <SdCard.h>
 #include <SerialNmea.h>
 #include <NmeaParser.h>
 #include <LxnavSentence.h>

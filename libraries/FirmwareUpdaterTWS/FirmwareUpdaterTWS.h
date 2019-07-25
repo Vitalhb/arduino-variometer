@@ -22,7 +22,7 @@
 #define FIRMWARE_UPDATER_TWS_H
 
 #include <Arduino.h>
-#include <VarioSettings.h>
+#include "VarioSettings.h"
 
 #define FIRMWARE_UPDATER_BOOTLOADER_ADDRESS 0x7800
 

@@ -28,7 +28,7 @@
   */
 #include <Arduino.h>
 #include <SPI.h>
-#include <VarioSettings.h>
+#include "VarioSettings.h"
 
 /***************************************/
 /* You can compile with static CS pin. */

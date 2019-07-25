@@ -22,7 +22,7 @@
 #define BMP280_H
 
 #include <Arduino.h>
-#include <VarioSettings.h>
+#include "VarioSettings.h"
 
 
 /* the normalized sea level pressure */  

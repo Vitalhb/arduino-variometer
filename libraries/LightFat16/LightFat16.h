@@ -23,8 +23,8 @@
 #define LIGHT_FAT_16_H
 
 #include <Arduino.h>
-#include <SdCard.h>
-#include <VarioSettings.h>
+#include "SdCard.h"
+#include "VarioSettings.h"
 
 /***************************************/
 /* You can compile with static CS pin. */

@@ -21,7 +21,7 @@
 #ifndef INVENSENSE_DEFINES_H
 #define INVENSENSE_DEFINES_H
 
-#include <VarioSettings.h>
+#include "VarioSettings.h"
 
 /* Time for some messy macro work. =]
  * #define MPU9150

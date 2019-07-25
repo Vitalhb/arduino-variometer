@@ -22,7 +22,7 @@
 #define LXNAV_SENTENCE_H
 
 #include <Arduino.h>
-#include <digit.h>
+#include "digit.h"
 
 /* no special character for the first digit (alti), just for vario "V" and parity "P" */
 #define LXNAV_SENTENCE_TAG "$LXWP0,Y,,,V,,,,,,,,*P\r\n" 

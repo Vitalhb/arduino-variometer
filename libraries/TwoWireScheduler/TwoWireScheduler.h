@@ -22,16 +22,16 @@
 #define TWO_WIRE_SCHEDULER_H
 
 #include <Arduino.h>
-#include <VarioSettings.h>
+#include "VarioSettings.h"
 
 #ifdef HAVE_BMP280
-#include <bmp280.h>
+#include "bmp280.h"
 #else
-#include <ms5611.h>
+#include "ms5611.h"
 #endif
 
 #ifdef HAVE_ACCELEROMETER
-#include <vertaccel.h>
+#include "vertaccel.h"
 #endif
 
  /* The unit is 0.008 ms    */

@@ -22,7 +22,7 @@
 #define LK8SENTENCE_H
 
 #include <Arduino.h>
-#include <digit.h>
+#include "digit.h"
 
 /* no special character for pressure, just for alti "A", vario "V" and parity "P" */
 #define LK8_SENTENCE_TAG "$LK8EX1,,A,V,99,999,*P\r\n"

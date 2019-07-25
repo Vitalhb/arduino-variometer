@@ -22,7 +22,7 @@
 #define SERIAL_NMEA_H
 
 #include <Arduino.h>
-#include <VarioSettings.h>
+#include "VarioSettings.h"
 
 /*********************/
 /* the GPS sentences */

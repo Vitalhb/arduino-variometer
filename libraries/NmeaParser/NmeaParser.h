@@ -22,7 +22,7 @@
 #define NMEA_PARSER_H
 
 #include <Arduino.h>
-#include <VarioSettings.h>
+#include "VarioSettings.h"
 
 
 /*********************/
