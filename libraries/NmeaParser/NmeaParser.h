@@ -1,7 +1,7 @@
 /* NmeaParser -- Parse NMEA GPS sentences
  *
  * Copyright 2016-2019 Baptiste PELLEGRIN
- * 
+ *
  * This file is part of GNUVario.
  *
  * GNUVario is free software: you can redistribute it and/or modify
@@ -25,11 +25,11 @@
 #include "VarioSettings.h"
 
 
-/*********************/
-/* the GPS sentences */
-/*********************/
+ /*********************/
+ /* the GPS sentences */
+ /*********************/
 
-/* precision = 10^(number of digit after dot in gps ouput) */
+ /* precision = 10^(number of digit after dot in gps ouput) */
 #ifndef NMEA_RMC_SPEED_PRECISION
 #define NMEA_RMC_SPEED_PRECISION 1000.0
 #endif
@@ -51,38 +51,39 @@
 #define NMEA_PARSER_GGA_ALTITUDE_POS 9
 
 
-class NmeaParser {
+class NmeaParser
+{
 
- public :
- NmeaParser() : satelliteCount(0), state(0) { }
-  uint8_t satelliteCount;
-  uint32_t time;
-  uint32_t date;
-  uint16_t precision;
-  uint16_t altitude;
-  uint16_t speed;
+public:
+	NmeaParser() : satelliteCount(0), state(0) {}
+	uint8_t satelliteCount;
+	uint32_t time;
+	uint32_t date;
+	uint16_t precision;
+	uint16_t altitude;
+	uint16_t speed;
 
-  void beginRMC(void);
-  void beginGGA(void);
-  void feed(uint8_t c);
-  bool haveNewAltiValue(void);
-  bool haveNewSpeedValue(void);
-  bool haveDate(void);
-  double getAlti(void);
-  double getSpeed(void); //in KMH
-  bool isParsing(void);
-  bool isParsingRMC(void);
-  bool isParsingGGA(void);
+	void beginRMC(void);
+	void beginGGA(void);
+	void feed(uint8_t c);
+	bool haveNewAltiValue(void);
+	bool haveNewSpeedValue(void);
+	bool haveDate(void);
+	double getAlti(void);
+	double getSpeed(void); //in KMH
+	bool isParsing(void);
+	bool isParsingRMC(void);
+	bool isParsingGGA(void);
 
- private :
-  uint8_t state;
-  uint8_t commaCount;
-  uint32_t value;
+private:
+	uint8_t state;
+	uint8_t commaCount;
+	uint32_t value;
 
 };
-  
-  
-  
+
+
+
 
 
 #endif

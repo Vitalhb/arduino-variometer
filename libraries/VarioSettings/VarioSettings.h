@@ -115,7 +115,7 @@
 /* -> Based on international standard atmosphere        */
 /* -> Calibrated with GPS altitude                      */
 //#define VARIOMETER_SDCARD_SEND_CALIBRATED_ALTITUDE
-//#define VARIOMETER_BLUETOOTH_SEND_CALIBRATED_ALTITUDE
+#define VARIOMETER_BLUETOOTH_SEND_CALIBRATED_ALTITUDE
 
 /* GPS track recording on SD card starting condition :  */
 /* -> As soon as possible (GPS fix)                     */
@@ -142,11 +142,11 @@
 /* Comment or uncomment according to  */
 /* what you embed in the variometer   */
 #define HAVE_SPEAKER
-#define HAVE_ACCELEROMETER
+//#define HAVE_ACCELEROMETER
 //#define HAVE_SCREEN
 #define HAVE_GPS
 //#define HAVE_SDCARD
-//#define HAVE_BLUETOOTH
+#define HAVE_BLUETOOTH
 #define HAVE_VOLTAGE_DIVISOR
 
 /* ms5611 parameters */
@@ -195,6 +195,7 @@
 /* The bauds rate used by the GPS and Bluetooth modules. */
 /* GPS and bluetooth need to have the same bauds rate.   */
 #define GPS_BLUETOOTH_BAUDS 9600
+//#define GPS_BLUETOOTH_BAUDS 38400
 
 /* The GPS period in ms                             */
 /* use the gps-time-analysis sketch to determine it */

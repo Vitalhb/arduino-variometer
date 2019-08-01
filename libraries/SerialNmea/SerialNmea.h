@@ -100,7 +100,7 @@
 #define SERIAL_NMEA_MODE ( _BV(UCSZ1) | _BV(UCSZ0) )
 #define SERIAL_NMEA_INT_MODE _BV(TXEN)  
 
-#define SERIAL_NMEA_BUFFER_SIZE 128
+#define SERIAL_NMEA_BUFFER_SIZE 256
 
 class SerialNmea {
 
@@ -113,8 +113,8 @@ class SerialNmea {
   void lock(void); //lock rx completely to write manually
   void write(uint8_t c);
   void release(void);
-  unsigned long getReceiveTimestamp(void);
-  unsigned long getLastReceiveTimestamp(void);
+ // unsigned long getReceiveTimestamp(void);
+ // unsigned long getLastReceiveTimestamp(void);
   
   void rxCompleteVect(void);
   void udrEmptyVect(void);
@@ -132,10 +132,10 @@ class SerialNmea {
   volatile int8_t nmeaParseStep;
   volatile uint8_t nmeaParity;
   volatile uint8_t parityTag;
-  volatile unsigned long receiveTimestamp;
-  volatile unsigned long lastReceiveTimestamp;
+  //volatile unsigned long receiveTimestamp;
+  //volatile unsigned long lastReceiveTimestamp;
 };
 
 extern SerialNmea serialNmea;
 
-#endif
+#endif //SERIAL_NMEA_H

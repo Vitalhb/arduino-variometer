@@ -14,76 +14,79 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="src">
-      <UniqueIdentifier>{7e024f6b-43d1-47be-875b-7c319223743d}</UniqueIdentifier>
+      <UniqueIdentifier>{b2add158-669e-43dc-a16e-8b275fbfe587}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\_micro-api-readonly">
-      <UniqueIdentifier>{ce4ea007-2a82-4f51-8fb5-5f5e6ea84757}</UniqueIdentifier>
+      <UniqueIdentifier>{3f20a3db-9188-438e-95ff-e9dc06d27860}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\_micro-api-readonly\core">
-      <UniqueIdentifier>{1eb10aba-76ac-4448-a48d-8c471be78a56}</UniqueIdentifier>
+      <UniqueIdentifier>{b672b5c9-0311-4191-99ef-49aff68372b3}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\_micro-api-readonly\libraries">
-      <UniqueIdentifier>{5e5f2da6-6f5a-4b12-a9e0-8d0a35b45222}</UniqueIdentifier>
+      <UniqueIdentifier>{b7bde495-0bdc-4745-9390-2e00e1cdb424}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\_micro-api-readonly\libraries\SPI">
-      <UniqueIdentifier>{e26d8b79-c29d-42f6-8da1-e743c8379639}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\VarioSettings">
-      <UniqueIdentifier>{b4eb2063-ad1b-4384-a7d2-312878508018}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\IntTW">
-      <UniqueIdentifier>{ca630df6-de12-4c32-863d-32d949aa8b94}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\ms5611">
-      <UniqueIdentifier>{f1d3636b-c0d5-426f-83b3-a11dedcf8b4e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\vertaccel">
-      <UniqueIdentifier>{c4d3e63e-2bcb-4aed-a212-4a2a3bc2aba4}</UniqueIdentifier>
+      <UniqueIdentifier>{9213559c-0f71-4797-9e4f-b8877cc56d14}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\_micro-api-readonly\libraries\EEPROM">
-      <UniqueIdentifier>{0fe6a7f0-ad4e-43f2-b7ef-81b8cbfc744b}</UniqueIdentifier>
+      <UniqueIdentifier>{d320233c-8a01-45e2-8392-ab92afb91433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\VarioSettings">
+      <UniqueIdentifier>{b20c3497-ea09-42c5-9da4-dd98bbb19ef8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\IntTW">
+      <UniqueIdentifier>{30589696-0477-45e3-8c7a-c99064c3f8aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\ms5611">
+      <UniqueIdentifier>{98bf5c47-4736-42bd-a004-22319b177954}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\_micro-api-readonly\libraries\LightInvensense">
-      <UniqueIdentifier>{fb6a6923-d074-4aa6-9c23-7416d792cef6}</UniqueIdentifier>
+      <UniqueIdentifier>{11383bd0-e89f-420f-92b7-13b523c7a601}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\TwoWireScheduler">
-      <UniqueIdentifier>{23f221e7-9c57-4c94-8f3e-c5477e584d6a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\kalmanvert">
-      <UniqueIdentifier>{b786eefb-bdd8-4b67-828b-fc50de2c2c25}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\beeper">
-      <UniqueIdentifier>{5875192d-84a4-4bd2-ae4a-cead73ab54cb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\varioscreen">
-      <UniqueIdentifier>{8bfc099d-e6e8-46e1-89e8-a558568f47e9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\digit">
-      <UniqueIdentifier>{21475399-732e-4951-b5c4-cdb137b6ee9c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\LightFat16">
-      <UniqueIdentifier>{4f0d0821-e0e2-4a9c-b6ca-2d57f36a3d58}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\SerialNmea">
-      <UniqueIdentifier>{e1d89a2c-e30b-438c-a869-fef3473735a7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\NmeaParser">
-      <UniqueIdentifier>{6e82182d-a172-4264-a0ba-1faccd868187}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\FirmwareUpdaterTWS">
-      <UniqueIdentifier>{554544d9-f6a2-48df-8cce-003c52735d00}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\FlightHistory">
-      <UniqueIdentifier>{f2b0186e-5def-4f89-b4a5-e36d0bc15f03}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\LPtoneAC">
-      <UniqueIdentifier>{eedf6f87-497e-44b1-bb5c-b9c9c1285cc3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\_micro-api-readonly\libraries\GpsSentences">
-      <UniqueIdentifier>{1c062ddf-62b3-4e4d-be04-e722a0f92d8c}</UniqueIdentifier>
+    <Filter Include="src\_micro-api-readonly\libraries\vertaccel">
+      <UniqueIdentifier>{dfb586a8-eae6-49b0-a3e6-1d419bf573b2}</UniqueIdentifier>
     </Filter>
     <Filter Include="src\_micro-api-readonly\libraries\bmp280">
-      <UniqueIdentifier>{b029baa7-99cf-40d4-ae0a-7e6e5ed6b005}</UniqueIdentifier>
+      <UniqueIdentifier>{d80d502b-0815-4c22-80ed-dd9837ea18fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\TwoWireScheduler">
+      <UniqueIdentifier>{942e2c18-55d0-43cd-9aca-975b8a656681}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\kalmanvert">
+      <UniqueIdentifier>{528641b3-5ace-4fa1-9ca8-c6b5bed48421}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\beeper">
+      <UniqueIdentifier>{f2dd0627-17f9-4b54-8aa9-4c2ce130dc67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\varioscreen">
+      <UniqueIdentifier>{59baf726-4f51-4952-a95e-10288c4da57b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\digit">
+      <UniqueIdentifier>{df53ff4f-3d29-4a36-8ede-0df8800a8166}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\LightFat16">
+      <UniqueIdentifier>{057eece2-5d4f-42aa-baaa-a77cfe86723a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\SerialNmea">
+      <UniqueIdentifier>{13914df3-aee9-49cf-a846-a02c00d04ce1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\NmeaParser">
+      <UniqueIdentifier>{b042aab5-2ee9-4362-9563-d544fda5fdf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\FirmwareUpdaterTWS">
+      <UniqueIdentifier>{7930165b-e7e6-4ac2-b2f1-08f8609eac36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\FlightHistory">
+      <UniqueIdentifier>{45b3b95b-b80f-4812-b9e5-befeaff35faf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\LPtoneAC">
+      <UniqueIdentifier>{a90e3f75-4517-4847-9c6c-0f49100ef12d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\GpsSentences">
+      <UniqueIdentifier>{24ddfdd2-9ec3-4aa6-a51d-805d45535029}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\_micro-api-readonly\libraries\SoftwareSerial">
+      <UniqueIdentifier>{a8e64971-7849-486f-b921-259de5faa44a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +99,9 @@
     </None>
     <None Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\EEPROM\library.properties">
       <Filter>src\_micro-api-readonly\libraries\EEPROM</Filter>
+    </None>
+    <None Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SoftwareSerial\library.properties">
+      <Filter>src\_micro-api-readonly\libraries\SoftwareSerial</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -168,8 +174,77 @@
     <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\EEPROM\src\EEPROM.h">
       <Filter>src\_micro-api-readonly\libraries\EEPROM</Filter>
     </ClInclude>
+    <ClInclude Include="..\libraries\VarioSettings\VarioSettings.h">
+      <Filter>src\_micro-api-readonly\libraries\VarioSettings</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\IntTW\IntTW.h">
+      <Filter>src\_micro-api-readonly\libraries\IntTW</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\ms5611\ms5611.h">
+      <Filter>src\_micro-api-readonly\libraries\ms5611</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightInvensense\InvenSense_defines.h">
+      <Filter>src\_micro-api-readonly\libraries\LightInvensense</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightInvensense\LightInvensense.h">
+      <Filter>src\_micro-api-readonly\libraries\LightInvensense</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\vertaccel\vertaccel.h">
+      <Filter>src\_micro-api-readonly\libraries\vertaccel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\bmp280\bmp280.h">
+      <Filter>src\_micro-api-readonly\libraries\bmp280</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\TwoWireScheduler\TwoWireScheduler.h">
+      <Filter>src\_micro-api-readonly\libraries\TwoWireScheduler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\kalmanvert\kalmanvert.h">
+      <Filter>src\_micro-api-readonly\libraries\kalmanvert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\beeper\beeper.h">
+      <Filter>src\_micro-api-readonly\libraries\beeper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\varioscreen\varioscreen.h">
+      <Filter>src\_micro-api-readonly\libraries\varioscreen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\digit\digit.h">
+      <Filter>src\_micro-api-readonly\libraries\digit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightFat16\Fat16Config.h">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightFat16\LightFat16.h">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LightFat16\SdCard.h">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\SerialNmea\SerialNmea.h">
+      <Filter>src\_micro-api-readonly\libraries\SerialNmea</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\NmeaParser\NmeaParser.h">
+      <Filter>src\_micro-api-readonly\libraries\NmeaParser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\FirmwareUpdaterTWS\FirmwareUpdaterTWS.h">
+      <Filter>src\_micro-api-readonly\libraries\FirmwareUpdaterTWS</Filter>
+    </ClInclude>
     <ClInclude Include="..\libraries\FlightHistory\FlightHistory.h">
       <Filter>src\_micro-api-readonly\libraries\FlightHistory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\LPtoneAC\toneAC.h">
+      <Filter>src\_micro-api-readonly\libraries\LPtoneAC</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\GpsSentences\IGCSentence.h">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\GpsSentences\LK8Sentence.h">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClInclude>
+    <ClInclude Include="..\libraries\GpsSentences\LxnavSentence.h">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SoftwareSerial\src\SoftwareSerial.h">
+      <Filter>src\_micro-api-readonly\libraries\SoftwareSerial</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -248,6 +323,66 @@
     <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\src\SPI.cpp">
       <Filter>src\_micro-api-readonly\libraries\SPI</Filter>
     </ClCompile>
+    <ClCompile Include="..\libraries\IntTW\IntTW.cpp">
+      <Filter>src\_micro-api-readonly\libraries\IntTW</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\ms5611\ms5611.cpp">
+      <Filter>src\_micro-api-readonly\libraries\ms5611</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\LightInvensense\LightInvensense.cpp">
+      <Filter>src\_micro-api-readonly\libraries\LightInvensense</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\vertaccel\vertaccel.cpp">
+      <Filter>src\_micro-api-readonly\libraries\vertaccel</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\bmp280\bmp280.cpp">
+      <Filter>src\_micro-api-readonly\libraries\bmp280</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\TwoWireScheduler\TwoWireScheduler.cpp">
+      <Filter>src\_micro-api-readonly\libraries\TwoWireScheduler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\kalmanvert\kalmanvert.cpp">
+      <Filter>src\_micro-api-readonly\libraries\kalmanvert</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\beeper\beeper.cpp">
+      <Filter>src\_micro-api-readonly\libraries\beeper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\varioscreen\varioscreen.cpp">
+      <Filter>src\_micro-api-readonly\libraries\varioscreen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\digit\digit.cpp">
+      <Filter>src\_micro-api-readonly\libraries\digit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\LightFat16\LightFat16.cpp">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\LightFat16\SdCard.cpp">
+      <Filter>src\_micro-api-readonly\libraries\LightFat16</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\SerialNmea\SerialNmea.cpp">
+      <Filter>src\_micro-api-readonly\libraries\SerialNmea</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\NmeaParser\NmeaParser.cpp">
+      <Filter>src\_micro-api-readonly\libraries\NmeaParser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\FirmwareUpdaterTWS\FirmwareUpdaterTWS.cpp">
+      <Filter>src\_micro-api-readonly\libraries\FirmwareUpdaterTWS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\LPtoneAC\toneAC.cpp">
+      <Filter>src\_micro-api-readonly\libraries\LPtoneAC</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\GpsSentences\IGCSentence.cpp">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\GpsSentences\LK8Sentence.cpp">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libraries\GpsSentences\LxnavSentence.cpp">
+      <Filter>src\_micro-api-readonly\libraries\GpsSentences</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SoftwareSerial\src\SoftwareSerial.cpp">
+      <Filter>src\_micro-api-readonly\libraries\SoftwareSerial</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SPI\keywords.txt">
@@ -255,6 +390,12 @@
     </Text>
     <Text Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\EEPROM\keywords.txt">
       <Filter>src\_micro-api-readonly\libraries\EEPROM</Filter>
+    </Text>
+    <Text Include="..\libraries\LPtoneAC\keywords.txt">
+      <Filter>src\_micro-api-readonly\libraries\LPtoneAC</Filter>
+    </Text>
+    <Text Include="C:\arduino-1.8.9\portable\packages\arduino\hardware\avr\1.6.23\libraries\SoftwareSerial\keywords.txt">
+      <Filter>src\_micro-api-readonly\libraries\SoftwareSerial</Filter>
     </Text>
   </ItemGroup>
 </Project>

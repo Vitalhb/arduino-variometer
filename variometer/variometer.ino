@@ -385,15 +385,11 @@ void loop()
 #ifdef HAVE_ACCELEROMETER
 	if (twScheduler.havePressure() && twScheduler.haveAccel())
 	{
-		kalmanvert.update(twScheduler.getAlti(),
-			twScheduler.getAccel(NULL),
-			millis());
+		kalmanvert.update(twScheduler.getAlti(), twScheduler.getAccel(NULL), millis());
 #else
 	if (twScheduler.havePressure())
 	{
-		kalmanvert.update(twScheduler.getAlti(),
-			0.0,
-			millis());
+		kalmanvert.update(twScheduler.getAlti(), 0.0, millis());
 #endif //HAVE_ACCELEROMETER
 
 		/* set beeper */
@@ -536,7 +532,7 @@ void loop()
 #else
 				bluetoothNMEA.begin(kalmanvert.getPosition(), kalmanvert.getVelocity());
 #endif
-				serialNmea.lock(); //will be writed at next loop
+				serialNmea.lock(); //will be written at next loop
 			}
 #endif //HAVE_BLUETOOTH
 		}
@@ -599,7 +595,7 @@ void loop()
 #endif //HAVE_BLUETOOTH
 #endif //HAVE_GPS
 
-	/* if no GPS, we can't calibrate, and we have juste to check flight start */
+	/* if no GPS, we can't calibrate, and we have just to check flight start */
 #ifndef HAVE_GPS
 	if (variometerState == VARIOMETER_STATE_CALIBRATED)
 	{ //already calibrated at start 
